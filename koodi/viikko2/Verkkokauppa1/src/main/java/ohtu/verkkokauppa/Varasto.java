@@ -3,11 +3,12 @@ package ohtu.verkkokauppa;
 import java.util.*;
 
 public class Varasto implements VarastoRp {
-    private Kirjanpito kirjanpito;
+    
+    private KirjanpitoRp kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
     
-    public Varasto() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Varasto(KirjanpitoRp kirjanpito) {
+        this.kirjanpito = kirjanpito;
         saldot = new HashMap<Tuote, Integer>();
         alustaTuotteet();
     }

@@ -8,7 +8,7 @@ public class StubIO implements IO {
     private List<String> lines;
     private int i;
     private ArrayList<String> prints;
-
+    
     public StubIO(List<String> values) {
         this.lines = values;
         prints = new ArrayList<>();
